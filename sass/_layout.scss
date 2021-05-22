@@ -1,14 +1,111 @@
 .container {
+    position: relative;
     max-width: 120rem;
     margin: 8rem auto;
-    background-color: var(--color-grey-light-2);
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-black-xl);
+
+    @media only screen and (max-width: $bp-largest) {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
 }
 
-.header {}
+.header {
+    position: relative;
+    height: 7rem;
+    font-size: var(--font-md);
+    background-color: var(--color-white);
+    border-bottom: var(--line-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.content {}
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
+}
 
-.sidebar {}
+.content {
+    display: flex;
 
-.htel-view {}
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    color: var(--color-white);
+    flex: 0 0 18%;
+}
+
+.hotel-view {
+    background-color: var(--color-white);
+    flex: 1;
+    font-size: var(--font-md);
+}
+
+///////////////////////////////////
+//MAIN - DETAILS
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    gap: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line-gray);
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    flex: 1.55;
+    // flex: 0 0 60%;
+    padding: 3rem;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-black-lg);
+    gap: 3rem;
+
+    &>*:not(:first-child) {
+        padding-top: 3rem;
+        border-top: var(--line-gray);
+
+        @media only screen and (max-width: $bp-small) {
+            padding-top: 2rem;
+        }
+    }
+
+    .paragraph {
+        text-align: justify;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        gap: 2rem;
+    }
+}
+
+
+.user-reviews {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    flex: 1;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0rem;
+        gap: 2rem;
+    }
+}
