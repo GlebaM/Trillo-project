@@ -260,8 +260,6 @@ body {
   display: flex;
   align-items: center;
   border-bottom: var(--line-gray); }
-  .overview > *:not(:last-child) {
-    flex-basis: 50%; }
   @media only screen and (max-width: 33.75em) {
     .overview > *:not(:last-child) {
       flex-basis: 50%; } }

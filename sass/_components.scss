@@ -285,10 +285,6 @@
     // justify-content: space-around;
     border-bottom: var(--line-gray);
 
-    &>*:not(:last-child) {
-        flex-basis: 50%;
-    }
-
     @media only screen and (max-width: $bp-smallest) {
         &>*:not(:last-child) {
             flex-basis: 50%;
